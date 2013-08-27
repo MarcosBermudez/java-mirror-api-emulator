@@ -20,7 +20,7 @@
 
 package com.google.api.services.mirror;
 
-import com.google.api.services.mirror.utils.AppEngineFileUtils;
+import com.google.api.services.mirror.utils.EmulatorUtil;
 
 /**
  * Service definition for Mirror (v1).
@@ -61,7 +61,7 @@ public class Mirror extends com.google.api.client.googleapis.services.json.Abstr
    *
    * @since 1.7
    */
-	public static final String DEFAULT_ROOT_URL = AppEngineFileUtils.getAppURL();
+	public static final String DEFAULT_ROOT_URL = EmulatorUtil.getAppEngineApplicationURL(); 
 
   /**
    * The default encoded service path of the service. This is determined when the library is
@@ -2667,7 +2667,7 @@ public class Mirror extends com.google.api.client.googleapis.services.json.Abstr
       super(
           transport,
           jsonFactory,
-				DEFAULT_ROOT_URL,
+		  DEFAULT_ROOT_URL,
           DEFAULT_SERVICE_PATH,
           httpRequestInitializer,
           false);
