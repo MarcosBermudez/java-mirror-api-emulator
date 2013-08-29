@@ -20,6 +20,8 @@
 
 package com.google.api.services.mirror.model;
 
+
+
 /**
  * Each item in the user's timeline is represented as a TimelineItem JSON structure, described
  * below.
@@ -31,6 +33,7 @@ package com.google.api.services.mirror.model;
  *
  * @author Google, Inc.
  */
+// Change for v1-emulated by bwnyasse : Modify the way to access com.google.api.client.util.DateTime key. Define field as java.util.String instead of com.google.api.client.util.DateTime
 @SuppressWarnings("javadoc")
 public final class TimelineItem extends com.google.api.client.json.GenericJson {
 
@@ -65,7 +68,7 @@ public final class TimelineItem extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime created;
+  private java.lang.String created;
 
   /**
    * The user or group that created this item.
@@ -82,7 +85,7 @@ public final class TimelineItem extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime displayTime;
+  private java.lang.String displayTime;
 
   /**
    * ETag for this item.
@@ -270,7 +273,7 @@ public final class TimelineItem extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime updated;
+  private java.lang.String updated;
 
   /**
    * A list of media attachments associated with this item. As a convenience, you can refer to
@@ -338,7 +341,7 @@ public final class TimelineItem extends com.google.api.client.json.GenericJson {
    * @return value or {@code null} for none
    */
   public com.google.api.client.util.DateTime getCreated() {
-    return created;
+    return new com.google.api.client.util.DateTime(created);
   }
 
   /**
@@ -346,7 +349,7 @@ public final class TimelineItem extends com.google.api.client.json.GenericJson {
    * @param created created or {@code null} for none
    */
   public TimelineItem setCreated(com.google.api.client.util.DateTime created) {
-    this.created = created;
+    this.created = created.toStringRfc3339();
     return this;
   }
 
@@ -375,7 +378,7 @@ public final class TimelineItem extends com.google.api.client.json.GenericJson {
    * @return value or {@code null} for none
    */
   public com.google.api.client.util.DateTime getDisplayTime() {
-    return displayTime;
+	  return new com.google.api.client.util.DateTime(displayTime);
   }
 
   /**
@@ -386,7 +389,7 @@ public final class TimelineItem extends com.google.api.client.json.GenericJson {
    * @param displayTime displayTime or {@code null} for none
    */
   public TimelineItem setDisplayTime(com.google.api.client.util.DateTime displayTime) {
-    this.displayTime = displayTime;
+    this.displayTime = displayTime.toStringRfc3339();
     return this;
   }
 
@@ -817,7 +820,7 @@ public final class TimelineItem extends com.google.api.client.json.GenericJson {
    * @return value or {@code null} for none
    */
   public com.google.api.client.util.DateTime getUpdated() {
-    return updated;
+	return new com.google.api.client.util.DateTime(updated);
   }
 
   /**
@@ -825,7 +828,7 @@ public final class TimelineItem extends com.google.api.client.json.GenericJson {
    * @param updated updated or {@code null} for none
    */
   public TimelineItem setUpdated(com.google.api.client.util.DateTime updated) {
-    this.updated = updated;
+    this.updated = updated.toStringRfc3339();
     return this;
   }
 

@@ -41,7 +41,10 @@ import com.google.api.services.mirror.utils.EmulatorUtil;
  *
  * @since 1.3
  * @author Google, Inc.
+ * 
+ * 
  */
+// Change for v1-emulated by bwnyasse : Modify the default encoded root URL of the service. Set the possibility to set a custom root URL.
 @SuppressWarnings("javadoc")
 public class Mirror extends com.google.api.client.googleapis.services.json.AbstractGoogleJsonClient {
 
