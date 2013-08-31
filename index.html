@@ -19,7 +19,7 @@
           <a id="forkme_banner" href="https://github.com/MarcosBermudez/java-mirror-api-emulator">View on GitHub</a>
 
           <h1 id="project_title">Java-mirror-api-emulator</h1>
-          <h2 id="project_tagline">We redirect the google java mirror-api to the Sacygami/mirror-api emulator. The purpose is to help java developers and non-glass-explorers to get an idea of what will be possible.</h2>
+          <h2 id="project_tagline">We redirect the google java mirror-api to the Scarygami/mirror-api emulator. The purpose is to help java developers and non-glass-explorers to get an idea of what will be possible.</h2>
 
             <section id="downloads">
               <a class="zip_download_link" href="https://github.com/MarcosBermudez/java-mirror-api-emulator/zipball/master">Download this project as a .zip file</a>
@@ -35,39 +35,63 @@
 <a name="quick-start-documentation" class="anchor" href="#quick-start-documentation"><span class="octicon octicon-link"></span></a>Quick start documentation</h1>
 
 <h2>
-<a name="install-you-own-google-glass-emulator" class="anchor" href="#install-you-own-google-glass-emulator"><span class="octicon octicon-link"></span></a>Install you own Google Glass emulator</h2>
+<a name="install-you-own-google-glass-emulator" class="anchor" href="#install-you-own-google-glass-emulator"><span class="octicon octicon-link"></span></a>Install your own Google Glass emulator</h2>
 
-<p>We use the Scarygami Google Glass emulator, he has done the main work. He is the one who makes all posible.
-You need to have installed and deployed your own <a href="https://github.com/Scarygami/mirror-api">Sarigami/mirror-api emulator</a>.See <a href="https://docs.google.com/document/d/1_qP2wxbYvfjbImdsk24ZPZkeERCUD4hIvBgBqvpHl9s/edit?usp=sharing">this document</a> for a detailed description of what this does and how it works. We will send orders from java to this emulator.</p>
+<p>We will use the Scarygami Google Glass emulator, he has done the main work. He is the one who makes all possible.
+You need to have installed and deployed your own <a href="https://github.com/Scarygami/mirror-api">Scarygami/mirror-api emulator</a>.See <a href="https://docs.google.com/document/d/1_qP2wxbYvfjbImdsk24ZPZkeERCUD4hIvBgBqvpHl9s/edit?usp=sharing">this document</a> for a detailed description of what have been done and how it works. 
+
+<p> Our goal is to send orders from java to this emulator.</p>
 
 <h2>
 <a name="get-the-official-google-glassmirror-quickstart-java" class="anchor" href="#get-the-official-google-glassmirror-quickstart-java"><span class="octicon octicon-link"></span></a>Get the official Google Glass/mirror-quickstart-java</h2>
 
 <p>We will use the <a href="https://github.com/googleglass/mirror-quickstart-java">googleglass/mirror-quickstart-java</a> as the quickstart project. You will have to clone the project and import in your favorite IDE.
-Is important to configure security, folow this <a href="https://github.com/googleglass/mirror-quickstart-java">guide</a> to enable the oauth secuirity.</p>
+
 
 <p>In the oauth.properties you will set your own Google Glass emulator credentials.</p>
 
 <h2>
 <a name="setup-the-java-mirror-emulator" class="anchor" href="#setup-the-java-mirror-emulator"><span class="octicon octicon-link"></span></a>Setup the java-mirror-emulator</h2>
 
-<p>Okey, the most dificult part is done. The only remaining thing is to configure the official Google Glass/mirror-quickstart-java to use your emulator. This is where this project magic starts. 
-Operaions to perform:</p>
+<p>Okey, the most difficult part is done. The only remaining thing is to configure the official Google Glass/mirror-quickstart-java to use your emulator. This is where this project magic starts. 
+Operations to perform :</p>
 
 <ol>
 <li><p>Download the last version of Java-mirror-api-emulator.jar</p></li>
-<li><p>Modify the pom.xml to use the mirror Java-mirror-api-emulator</p></li>
-<li><p>Configure your emulator URL </p></li>
+<li><p>Modify the pom.xml to use the mirror Java-mirror-api-emulator.</p></li>
+  <pre><code>&lt;dependency&gt;
+      &lt;groupId&gt;com.google.apis&lt;/groupId&gt;
+      &lt;artifactId&gt;google-api-services-mirror-emulated&lt;/artifactId&gt;
+      &lt;version&gt;v1-emulated&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+<li><p>Modify the web.xml for images attachement support. Add the following lines :  </p></li>
+  <pre><code>&lt;servlet&gt;
+    &lt;servlet-name&gt;DownloadAttachementsServlet&lt;/servlet-name&gt;
+    &lt;servlet-class&gt;com.google.api.services.mirror.utils.DownloadAttachementsServlet&lt;/servlet-class&gt;
+&lt;/servlet&gt;
+&lt;servlet-mapping&gt;
+    &lt;servlet-name&gt;DownloadAttachementsServlet&lt;/servlet-name&gt;
+    &lt;url-pattern&gt;/attachements/*&lt;/url-pattern&gt;
+&lt;/servlet-mapping&gt;
+  </code></pre>
+<li><p>Configure the quickstart to use your emulator URL as root URL of the service. Assuming that your emulator URL is <strong>https://&lt;your_app_id&gt;.appspot.com</strong>. Change the way to retrieve the <strong>Mirror</strong> in the <strong>com.google.glassware.MirrorClient</strong> class. Use the <strong>com.google.api.services.mirror.utils.EmulatorUtil</strong> to have something like this :</p></li>
+  <pre><code>  
+  public static Mirror getMirror(Credential credential) {
+    return EmulatorUtil.getMirror(credential, "PG Java Starter", 
+    "https://&lt;your_app_id&gt;.appspot.com");
+  }
+  </code></pre>
 </ol><h2>
 <a name="launch-your-glassware" class="anchor" href="#launch-your-glassware"><span class="octicon octicon-link"></span></a>Launch your GlassWare</h2>
 
-<p>Okey your Glassware is the quickstart, but I love this therm. The only remaining thing is to get to the folder of the quickstart, and execute comand :  </p>
+<p>Okey your Glassware is the quickstart, but we love this term. The only remaining thing is to get your glassware project, and execute comand : </p>
 
 <blockquote>
 <p>mvn jetty:run.</p>
 </blockquote>
 
-<p>Launch your browser open the URL:  </p>
+<p>In your favorite browser , open the URL :  </p>
 
 <p><a>localhost:8080</a></p>
       </section>
@@ -76,7 +100,7 @@ Operaions to perform:</p>
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-        <p class="copyright">Java-mirror-api-emulator maintained by <a href="https://github.com/MarcosBermudez">MarcosBermudez</a></p>
+        <p class="copyright">Java-mirror-api-emulator maintained by <a href="https://github.com/MarcosBermudez">MarcosBermudez</a> and <a href="https://github.com/bwnyasse">Boris-Wilfried</a></p>
         <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
