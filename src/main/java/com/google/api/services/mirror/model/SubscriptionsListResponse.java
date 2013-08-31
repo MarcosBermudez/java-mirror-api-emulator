@@ -21,75 +21,78 @@
 package com.google.api.services.mirror.model;
 
 /**
- * A list of Subscriptions. This is the response from the server to GET requests on the subscription
- * collection.
- *
- * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Mirror API. For a detailed explanation see:
- * <a href="http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ * A list of Subscriptions. This is the response from the server to GET requests on the subscription collection.
+ * 
+ * <p>
+ * This is the Java data model class that specifies how to parse/serialize into the JSON that is transmitted over HTTP
+ * when working with the Google Mirror API. For a detailed explanation see: <a
+ * href="http://code.google.com/p/google-http-java-client/wiki/JSON"
+ * >http://code.google.com/p/google-http-java-client/wiki/JSON</a>
  * </p>
- *
+ * 
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
 public final class SubscriptionsListResponse extends com.google.api.client.json.GenericJson {
 
-  /**
-   * The list of subscriptions.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<Subscription> items;
+    /**
+     * The list of subscriptions. The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.util.List<Subscription> items;
 
-  /**
-   * The type of resource. This is always mirror#subscriptionsList.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String kind;
+    /**
+     * The type of resource. This is always mirror#subscriptionsList. The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String kind;
 
-  /**
-   * The list of subscriptions.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<Subscription> getItems() {
-    return items;
-  }
+    /**
+     * The list of subscriptions.
+     * 
+     * @return value or {@code null} for none
+     */
+    public java.util.List<Subscription> getItems() {
+        return items;
+    }
 
-  /**
-   * The list of subscriptions.
-   * @param items items or {@code null} for none
-   */
-  public SubscriptionsListResponse setItems(java.util.List<Subscription> items) {
-    this.items = items;
-    return this;
-  }
+    /**
+     * The list of subscriptions.
+     * 
+     * @param items items or {@code null} for none
+     */
+    public SubscriptionsListResponse setItems(java.util.List<Subscription> items) {
+        this.items = items;
+        return this;
+    }
 
-  /**
-   * The type of resource. This is always mirror#subscriptionsList.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getKind() {
-    return kind;
-  }
+    /**
+     * The type of resource. This is always mirror#subscriptionsList.
+     * 
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getKind() {
+        return kind;
+    }
 
-  /**
-   * The type of resource. This is always mirror#subscriptionsList.
-   * @param kind kind or {@code null} for none
-   */
-  public SubscriptionsListResponse setKind(java.lang.String kind) {
-    this.kind = kind;
-    return this;
-  }
+    /**
+     * The type of resource. This is always mirror#subscriptionsList.
+     * 
+     * @param kind kind or {@code null} for none
+     */
+    public SubscriptionsListResponse setKind(java.lang.String kind) {
+        this.kind = kind;
+        return this;
+    }
 
-  @Override
-  public SubscriptionsListResponse set(String fieldName, Object value) {
-    return (SubscriptionsListResponse) super.set(fieldName, value);
-  }
+    @Override
+    public SubscriptionsListResponse set(String fieldName, Object value) {
+        return (SubscriptionsListResponse) super.set(fieldName, value);
+    }
 
-  @Override
-  public SubscriptionsListResponse clone() {
-    return (SubscriptionsListResponse) super.clone();
-  }
+    @Override
+    public SubscriptionsListResponse clone() {
+        return (SubscriptionsListResponse) super.clone();
+    }
 
 }

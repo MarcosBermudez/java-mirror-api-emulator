@@ -22,94 +22,96 @@ package com.google.api.services.mirror.model;
 
 /**
  * Represents an action taken by the user that triggered a notification.
- *
- * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Mirror API. For a detailed explanation see:
- * <a href="http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ * 
+ * <p>
+ * This is the Java data model class that specifies how to parse/serialize into the JSON that is transmitted over HTTP
+ * when working with the Google Mirror API. For a detailed explanation see: <a
+ * href="http://code.google.com/p/google-http-java-client/wiki/JSON"
+ * >http://code.google.com/p/google-http-java-client/wiki/JSON</a>
  * </p>
- *
+ * 
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
 public final class UserAction extends com.google.api.client.json.GenericJson {
 
-  /**
-   * An optional payload for the action.
-   *
-   * For actions of type CUSTOM, this is the ID of the custom menu item that was selected.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String payload;
+    /**
+     * An optional payload for the action.
+     * 
+     * For actions of type CUSTOM, this is the ID of the custom menu item that was selected. The value may be
+     * {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String payload;
 
-  /**
-   * The type of action. The value of this can be: - SHARE - the user shared an item.  - REPLY - the
-   * user replied to an item.  - REPLY_ALL - the user replied to all recipients of an item.  -
-   * CUSTOM - the user selected a custom menu item on the timeline item.  - DELETE - the user
-   * deleted the item.  - PIN - the user pinned the item.  - UNPIN - the user unpinned the item.  In
-   * the future, additional types may be added. UserActions with unrecognized types should be
-   * ignored.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String type;
+    /**
+     * The type of action. The value of this can be: - SHARE - the user shared an item. - REPLY - the user replied to an
+     * item. - REPLY_ALL - the user replied to all recipients of an item. - CUSTOM - the user selected a custom menu
+     * item on the timeline item. - DELETE - the user deleted the item. - PIN - the user pinned the item. - UNPIN - the
+     * user unpinned the item. In the future, additional types may be added. UserActions with unrecognized types should
+     * be ignored. The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String type;
 
-  /**
-   * An optional payload for the action.
-   *
-   * For actions of type CUSTOM, this is the ID of the custom menu item that was selected.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getPayload() {
-    return payload;
-  }
+    /**
+     * An optional payload for the action.
+     * 
+     * For actions of type CUSTOM, this is the ID of the custom menu item that was selected.
+     * 
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getPayload() {
+        return payload;
+    }
 
-  /**
-   * An optional payload for the action.
-   *
-   * For actions of type CUSTOM, this is the ID of the custom menu item that was selected.
-   * @param payload payload or {@code null} for none
-   */
-  public UserAction setPayload(java.lang.String payload) {
-    this.payload = payload;
-    return this;
-  }
+    /**
+     * An optional payload for the action.
+     * 
+     * For actions of type CUSTOM, this is the ID of the custom menu item that was selected.
+     * 
+     * @param payload payload or {@code null} for none
+     */
+    public UserAction setPayload(java.lang.String payload) {
+        this.payload = payload;
+        return this;
+    }
 
-  /**
-   * The type of action. The value of this can be: - SHARE - the user shared an item.  - REPLY - the
-   * user replied to an item.  - REPLY_ALL - the user replied to all recipients of an item.  -
-   * CUSTOM - the user selected a custom menu item on the timeline item.  - DELETE - the user
-   * deleted the item.  - PIN - the user pinned the item.  - UNPIN - the user unpinned the item.  In
-   * the future, additional types may be added. UserActions with unrecognized types should be
-   * ignored.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getType() {
-    return type;
-  }
+    /**
+     * The type of action. The value of this can be: - SHARE - the user shared an item. - REPLY - the user replied to an
+     * item. - REPLY_ALL - the user replied to all recipients of an item. - CUSTOM - the user selected a custom menu
+     * item on the timeline item. - DELETE - the user deleted the item. - PIN - the user pinned the item. - UNPIN - the
+     * user unpinned the item. In the future, additional types may be added. UserActions with unrecognized types should
+     * be ignored.
+     * 
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getType() {
+        return type;
+    }
 
-  /**
-   * The type of action. The value of this can be: - SHARE - the user shared an item.  - REPLY - the
-   * user replied to an item.  - REPLY_ALL - the user replied to all recipients of an item.  -
-   * CUSTOM - the user selected a custom menu item on the timeline item.  - DELETE - the user
-   * deleted the item.  - PIN - the user pinned the item.  - UNPIN - the user unpinned the item.  In
-   * the future, additional types may be added. UserActions with unrecognized types should be
-   * ignored.
-   * @param type type or {@code null} for none
-   */
-  public UserAction setType(java.lang.String type) {
-    this.type = type;
-    return this;
-  }
+    /**
+     * The type of action. The value of this can be: - SHARE - the user shared an item. - REPLY - the user replied to an
+     * item. - REPLY_ALL - the user replied to all recipients of an item. - CUSTOM - the user selected a custom menu
+     * item on the timeline item. - DELETE - the user deleted the item. - PIN - the user pinned the item. - UNPIN - the
+     * user unpinned the item. In the future, additional types may be added. UserActions with unrecognized types should
+     * be ignored.
+     * 
+     * @param type type or {@code null} for none
+     */
+    public UserAction setType(java.lang.String type) {
+        this.type = type;
+        return this;
+    }
 
-  @Override
-  public UserAction set(String fieldName, Object value) {
-    return (UserAction) super.set(fieldName, value);
-  }
+    @Override
+    public UserAction set(String fieldName, Object value) {
+        return (UserAction) super.set(fieldName, value);
+    }
 
-  @Override
-  public UserAction clone() {
-    return (UserAction) super.clone();
-  }
+    @Override
+    public UserAction clone() {
+        return (UserAction) super.clone();
+    }
 
 }

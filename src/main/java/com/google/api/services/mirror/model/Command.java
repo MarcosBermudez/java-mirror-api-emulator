@@ -22,58 +22,59 @@ package com.google.api.services.mirror.model;
 
 /**
  * A single menu command that is part of a Contact.
- *
- * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Mirror API. For a detailed explanation see:
- * <a href="http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ * 
+ * <p>
+ * This is the Java data model class that specifies how to parse/serialize into the JSON that is transmitted over HTTP
+ * when working with the Google Mirror API. For a detailed explanation see: <a
+ * href="http://code.google.com/p/google-http-java-client/wiki/JSON"
+ * >http://code.google.com/p/google-http-java-client/wiki/JSON</a>
  * </p>
- *
+ * 
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
 public final class Command extends com.google.api.client.json.GenericJson {
 
-  /**
-   * The type of operation this command corresponds to. Allowed values are: - TAKE_A_NOTE - Shares a
-   * timeline item with the transcription of user speech from the "Take a note" voice menu command.
-   * - POST_AN_UPDATE - Shares a timeline item with the transcription of user speech from the "Post
-   * an update" voice menu command.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String type;
+    /**
+     * The type of operation this command corresponds to. Allowed values are: - TAKE_A_NOTE - Shares a timeline item
+     * with the transcription of user speech from the "Take a note" voice menu command. - POST_AN_UPDATE - Shares a
+     * timeline item with the transcription of user speech from the "Post an update" voice menu command. The value may
+     * be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String type;
 
-  /**
-   * The type of operation this command corresponds to. Allowed values are: - TAKE_A_NOTE - Shares a
-   * timeline item with the transcription of user speech from the "Take a note" voice menu command.
-   * - POST_AN_UPDATE - Shares a timeline item with the transcription of user speech from the "Post
-   * an update" voice menu command.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getType() {
-    return type;
-  }
+    /**
+     * The type of operation this command corresponds to. Allowed values are: - TAKE_A_NOTE - Shares a timeline item
+     * with the transcription of user speech from the "Take a note" voice menu command. - POST_AN_UPDATE - Shares a
+     * timeline item with the transcription of user speech from the "Post an update" voice menu command.
+     * 
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getType() {
+        return type;
+    }
 
-  /**
-   * The type of operation this command corresponds to. Allowed values are: - TAKE_A_NOTE - Shares a
-   * timeline item with the transcription of user speech from the "Take a note" voice menu command.
-   * - POST_AN_UPDATE - Shares a timeline item with the transcription of user speech from the "Post
-   * an update" voice menu command.
-   * @param type type or {@code null} for none
-   */
-  public Command setType(java.lang.String type) {
-    this.type = type;
-    return this;
-  }
+    /**
+     * The type of operation this command corresponds to. Allowed values are: - TAKE_A_NOTE - Shares a timeline item
+     * with the transcription of user speech from the "Take a note" voice menu command. - POST_AN_UPDATE - Shares a
+     * timeline item with the transcription of user speech from the "Post an update" voice menu command.
+     * 
+     * @param type type or {@code null} for none
+     */
+    public Command setType(java.lang.String type) {
+        this.type = type;
+        return this;
+    }
 
-  @Override
-  public Command set(String fieldName, Object value) {
-    return (Command) super.set(fieldName, value);
-  }
+    @Override
+    public Command set(String fieldName, Object value) {
+        return (Command) super.set(fieldName, value);
+    }
 
-  @Override
-  public Command clone() {
-    return (Command) super.clone();
-  }
+    @Override
+    public Command clone() {
+        return (Command) super.clone();
+    }
 
 }

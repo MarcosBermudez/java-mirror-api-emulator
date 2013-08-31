@@ -22,259 +22,270 @@ package com.google.api.services.mirror.model;
 
 /**
  * A subscription to events on a collection.
- *
- * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Mirror API. For a detailed explanation see:
- * <a href="http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ * 
+ * <p>
+ * This is the Java data model class that specifies how to parse/serialize into the JSON that is transmitted over HTTP
+ * when working with the Google Mirror API. For a detailed explanation see: <a
+ * href="http://code.google.com/p/google-http-java-client/wiki/JSON"
+ * >http://code.google.com/p/google-http-java-client/wiki/JSON</a>
  * </p>
- *
+ * 
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
 public final class Subscription extends com.google.api.client.json.GenericJson {
 
-  /**
-   * The URL where notifications should be delivered (must start with https://).
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String callbackUrl;
+    /**
+     * The URL where notifications should be delivered (must start with https://). The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String callbackUrl;
 
-  /**
-   * The collection to subscribe to. Allowed values are: - timeline - Changes in the timeline
-   * including insertion, deletion, and updates.  - locations - Location updates.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String collection;
+    /**
+     * The collection to subscribe to. Allowed values are: - timeline - Changes in the timeline including insertion,
+     * deletion, and updates. - locations - Location updates. The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String collection;
 
-  /**
-   * The ID of the subscription.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String id;
+    /**
+     * The ID of the subscription. The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String id;
 
-  /**
-   * The type of resource. This is always mirror#subscription.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String kind;
+    /**
+     * The type of resource. This is always mirror#subscription. The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String kind;
 
-  /**
-   * Container object for notifications. This is not populated in the Subscription resource.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private Notification notification;
+    /**
+     * Container object for notifications. This is not populated in the Subscription resource. The value may be
+     * {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private Notification notification;
 
-  /**
-   * A list of operations that should be subscribed to. An empty list indicates that all operations
-   * on the collection should be subscribed to. Allowed values are: - UPDATE - The item has been
-   * updated.  - INSERT - A new item has been inserted.  - DELETE - The item has been deleted.  -
-   * MENU_ACTION - A custom menu item has been triggered by the user.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> operation;
+    /**
+     * A list of operations that should be subscribed to. An empty list indicates that all operations on the collection
+     * should be subscribed to. Allowed values are: - UPDATE - The item has been updated. - INSERT - A new item has been
+     * inserted. - DELETE - The item has been deleted. - MENU_ACTION - A custom menu item has been triggered by the
+     * user. The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.util.List<java.lang.String> operation;
 
-  /**
-   * The time at which this subscription was last modified, formatted according to RFC 3339.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime updated;
+    /**
+     * The time at which this subscription was last modified, formatted according to RFC 3339. The value may be
+     * {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private com.google.api.client.util.DateTime updated;
 
-  /**
-   * An opaque token sent to the subscriber in notifications so that it can determine the ID of the
-   * user.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String userToken;
+    /**
+     * An opaque token sent to the subscriber in notifications so that it can determine the ID of the user. The value
+     * may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String userToken;
 
-  /**
-   * A secret token sent to the subscriber in notifications so that it can verify that the
-   * notification was generated by Google.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String verifyToken;
+    /**
+     * A secret token sent to the subscriber in notifications so that it can verify that the notification was generated
+     * by Google. The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String verifyToken;
 
-  /**
-   * The URL where notifications should be delivered (must start with https://).
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getCallbackUrl() {
-    return callbackUrl;
-  }
+    /**
+     * The URL where notifications should be delivered (must start with https://).
+     * 
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getCallbackUrl() {
+        return callbackUrl;
+    }
 
-  /**
-   * The URL where notifications should be delivered (must start with https://).
-   * @param callbackUrl callbackUrl or {@code null} for none
-   */
-  public Subscription setCallbackUrl(java.lang.String callbackUrl) {
-    this.callbackUrl = callbackUrl;
-    return this;
-  }
+    /**
+     * The URL where notifications should be delivered (must start with https://).
+     * 
+     * @param callbackUrl callbackUrl or {@code null} for none
+     */
+    public Subscription setCallbackUrl(java.lang.String callbackUrl) {
+        this.callbackUrl = callbackUrl;
+        return this;
+    }
 
-  /**
-   * The collection to subscribe to. Allowed values are: - timeline - Changes in the timeline
-   * including insertion, deletion, and updates.  - locations - Location updates.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getCollection() {
-    return collection;
-  }
+    /**
+     * The collection to subscribe to. Allowed values are: - timeline - Changes in the timeline including insertion,
+     * deletion, and updates. - locations - Location updates.
+     * 
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getCollection() {
+        return collection;
+    }
 
-  /**
-   * The collection to subscribe to. Allowed values are: - timeline - Changes in the timeline
-   * including insertion, deletion, and updates.  - locations - Location updates.
-   * @param collection collection or {@code null} for none
-   */
-  public Subscription setCollection(java.lang.String collection) {
-    this.collection = collection;
-    return this;
-  }
+    /**
+     * The collection to subscribe to. Allowed values are: - timeline - Changes in the timeline including insertion,
+     * deletion, and updates. - locations - Location updates.
+     * 
+     * @param collection collection or {@code null} for none
+     */
+    public Subscription setCollection(java.lang.String collection) {
+        this.collection = collection;
+        return this;
+    }
 
-  /**
-   * The ID of the subscription.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getId() {
-    return id;
-  }
+    /**
+     * The ID of the subscription.
+     * 
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getId() {
+        return id;
+    }
 
-  /**
-   * The ID of the subscription.
-   * @param id id or {@code null} for none
-   */
-  public Subscription setId(java.lang.String id) {
-    this.id = id;
-    return this;
-  }
+    /**
+     * The ID of the subscription.
+     * 
+     * @param id id or {@code null} for none
+     */
+    public Subscription setId(java.lang.String id) {
+        this.id = id;
+        return this;
+    }
 
-  /**
-   * The type of resource. This is always mirror#subscription.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getKind() {
-    return kind;
-  }
+    /**
+     * The type of resource. This is always mirror#subscription.
+     * 
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getKind() {
+        return kind;
+    }
 
-  /**
-   * The type of resource. This is always mirror#subscription.
-   * @param kind kind or {@code null} for none
-   */
-  public Subscription setKind(java.lang.String kind) {
-    this.kind = kind;
-    return this;
-  }
+    /**
+     * The type of resource. This is always mirror#subscription.
+     * 
+     * @param kind kind or {@code null} for none
+     */
+    public Subscription setKind(java.lang.String kind) {
+        this.kind = kind;
+        return this;
+    }
 
-  /**
-   * Container object for notifications. This is not populated in the Subscription resource.
-   * @return value or {@code null} for none
-   */
-  public Notification getNotification() {
-    return notification;
-  }
+    /**
+     * Container object for notifications. This is not populated in the Subscription resource.
+     * 
+     * @return value or {@code null} for none
+     */
+    public Notification getNotification() {
+        return notification;
+    }
 
-  /**
-   * Container object for notifications. This is not populated in the Subscription resource.
-   * @param notification notification or {@code null} for none
-   */
-  public Subscription setNotification(Notification notification) {
-    this.notification = notification;
-    return this;
-  }
+    /**
+     * Container object for notifications. This is not populated in the Subscription resource.
+     * 
+     * @param notification notification or {@code null} for none
+     */
+    public Subscription setNotification(Notification notification) {
+        this.notification = notification;
+        return this;
+    }
 
-  /**
-   * A list of operations that should be subscribed to. An empty list indicates that all operations
-   * on the collection should be subscribed to. Allowed values are: - UPDATE - The item has been
-   * updated.  - INSERT - A new item has been inserted.  - DELETE - The item has been deleted.  -
-   * MENU_ACTION - A custom menu item has been triggered by the user.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getOperation() {
-    return operation;
-  }
+    /**
+     * A list of operations that should be subscribed to. An empty list indicates that all operations on the collection
+     * should be subscribed to. Allowed values are: - UPDATE - The item has been updated. - INSERT - A new item has been
+     * inserted. - DELETE - The item has been deleted. - MENU_ACTION - A custom menu item has been triggered by the
+     * user.
+     * 
+     * @return value or {@code null} for none
+     */
+    public java.util.List<java.lang.String> getOperation() {
+        return operation;
+    }
 
-  /**
-   * A list of operations that should be subscribed to. An empty list indicates that all operations
-   * on the collection should be subscribed to. Allowed values are: - UPDATE - The item has been
-   * updated.  - INSERT - A new item has been inserted.  - DELETE - The item has been deleted.  -
-   * MENU_ACTION - A custom menu item has been triggered by the user.
-   * @param operation operation or {@code null} for none
-   */
-  public Subscription setOperation(java.util.List<java.lang.String> operation) {
-    this.operation = operation;
-    return this;
-  }
+    /**
+     * A list of operations that should be subscribed to. An empty list indicates that all operations on the collection
+     * should be subscribed to. Allowed values are: - UPDATE - The item has been updated. - INSERT - A new item has been
+     * inserted. - DELETE - The item has been deleted. - MENU_ACTION - A custom menu item has been triggered by the
+     * user.
+     * 
+     * @param operation operation or {@code null} for none
+     */
+    public Subscription setOperation(java.util.List<java.lang.String> operation) {
+        this.operation = operation;
+        return this;
+    }
 
-  /**
-   * The time at which this subscription was last modified, formatted according to RFC 3339.
-   * @return value or {@code null} for none
-   */
-  public com.google.api.client.util.DateTime getUpdated() {
-    return updated;
-  }
+    /**
+     * The time at which this subscription was last modified, formatted according to RFC 3339.
+     * 
+     * @return value or {@code null} for none
+     */
+    public com.google.api.client.util.DateTime getUpdated() {
+        return updated;
+    }
 
-  /**
-   * The time at which this subscription was last modified, formatted according to RFC 3339.
-   * @param updated updated or {@code null} for none
-   */
-  public Subscription setUpdated(com.google.api.client.util.DateTime updated) {
-    this.updated = updated;
-    return this;
-  }
+    /**
+     * The time at which this subscription was last modified, formatted according to RFC 3339.
+     * 
+     * @param updated updated or {@code null} for none
+     */
+    public Subscription setUpdated(com.google.api.client.util.DateTime updated) {
+        this.updated = updated;
+        return this;
+    }
 
-  /**
-   * An opaque token sent to the subscriber in notifications so that it can determine the ID of the
-   * user.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getUserToken() {
-    return userToken;
-  }
+    /**
+     * An opaque token sent to the subscriber in notifications so that it can determine the ID of the user.
+     * 
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getUserToken() {
+        return userToken;
+    }
 
-  /**
-   * An opaque token sent to the subscriber in notifications so that it can determine the ID of the
-   * user.
-   * @param userToken userToken or {@code null} for none
-   */
-  public Subscription setUserToken(java.lang.String userToken) {
-    this.userToken = userToken;
-    return this;
-  }
+    /**
+     * An opaque token sent to the subscriber in notifications so that it can determine the ID of the user.
+     * 
+     * @param userToken userToken or {@code null} for none
+     */
+    public Subscription setUserToken(java.lang.String userToken) {
+        this.userToken = userToken;
+        return this;
+    }
 
-  /**
-   * A secret token sent to the subscriber in notifications so that it can verify that the
-   * notification was generated by Google.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getVerifyToken() {
-    return verifyToken;
-  }
+    /**
+     * A secret token sent to the subscriber in notifications so that it can verify that the notification was generated
+     * by Google.
+     * 
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getVerifyToken() {
+        return verifyToken;
+    }
 
-  /**
-   * A secret token sent to the subscriber in notifications so that it can verify that the
-   * notification was generated by Google.
-   * @param verifyToken verifyToken or {@code null} for none
-   */
-  public Subscription setVerifyToken(java.lang.String verifyToken) {
-    this.verifyToken = verifyToken;
-    return this;
-  }
+    /**
+     * A secret token sent to the subscriber in notifications so that it can verify that the notification was generated
+     * by Google.
+     * 
+     * @param verifyToken verifyToken or {@code null} for none
+     */
+    public Subscription setVerifyToken(java.lang.String verifyToken) {
+        this.verifyToken = verifyToken;
+        return this;
+    }
 
-  @Override
-  public Subscription set(String fieldName, Object value) {
-    return (Subscription) super.set(fieldName, value);
-  }
+    @Override
+    public Subscription set(String fieldName, Object value) {
+        return (Subscription) super.set(fieldName, value);
+    }
 
-  @Override
-  public Subscription clone() {
-    return (Subscription) super.clone();
-  }
+    @Override
+    public Subscription clone() {
+        return (Subscription) super.clone();
+    }
 
 }

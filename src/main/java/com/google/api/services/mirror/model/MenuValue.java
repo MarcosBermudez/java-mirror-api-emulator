@@ -22,106 +22,111 @@ package com.google.api.services.mirror.model;
 
 /**
  * A single value that is part of a MenuItem.
- *
- * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Mirror API. For a detailed explanation see:
- * <a href="http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ * 
+ * <p>
+ * This is the Java data model class that specifies how to parse/serialize into the JSON that is transmitted over HTTP
+ * when working with the Google Mirror API. For a detailed explanation see: <a
+ * href="http://code.google.com/p/google-http-java-client/wiki/JSON"
+ * >http://code.google.com/p/google-http-java-client/wiki/JSON</a>
  * </p>
- *
+ * 
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
 public final class MenuValue extends com.google.api.client.json.GenericJson {
 
-  /**
-   * The name to display for the menu item.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String displayName;
+    /**
+     * The name to display for the menu item. The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String displayName;
 
-  /**
-   * URL of an icon to display with the menu item.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String iconUrl;
+    /**
+     * URL of an icon to display with the menu item. The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String iconUrl;
 
-  /**
-   * The state that this value applies to. Allowed values are: - DEFAULT - Default value shown when
-   * displayed in the menuItems list.  - PENDING - Value shown when the menuItem has been selected
-   * by the user but can still be cancelled.  - CONFIRMED - Value shown when the menuItem has been
-   * selected by the user and can no longer be cancelled.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String state;
+    /**
+     * The state that this value applies to. Allowed values are: - DEFAULT - Default value shown when displayed in the
+     * menuItems list. - PENDING - Value shown when the menuItem has been selected by the user but can still be
+     * cancelled. - CONFIRMED - Value shown when the menuItem has been selected by the user and can no longer be
+     * cancelled. The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String state;
 
-  /**
-   * The name to display for the menu item.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getDisplayName() {
-    return displayName;
-  }
+    /**
+     * The name to display for the menu item.
+     * 
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getDisplayName() {
+        return displayName;
+    }
 
-  /**
-   * The name to display for the menu item.
-   * @param displayName displayName or {@code null} for none
-   */
-  public MenuValue setDisplayName(java.lang.String displayName) {
-    this.displayName = displayName;
-    return this;
-  }
+    /**
+     * The name to display for the menu item.
+     * 
+     * @param displayName displayName or {@code null} for none
+     */
+    public MenuValue setDisplayName(java.lang.String displayName) {
+        this.displayName = displayName;
+        return this;
+    }
 
-  /**
-   * URL of an icon to display with the menu item.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getIconUrl() {
-    return iconUrl;
-  }
+    /**
+     * URL of an icon to display with the menu item.
+     * 
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getIconUrl() {
+        return iconUrl;
+    }
 
-  /**
-   * URL of an icon to display with the menu item.
-   * @param iconUrl iconUrl or {@code null} for none
-   */
-  public MenuValue setIconUrl(java.lang.String iconUrl) {
-    this.iconUrl = iconUrl;
-    return this;
-  }
+    /**
+     * URL of an icon to display with the menu item.
+     * 
+     * @param iconUrl iconUrl or {@code null} for none
+     */
+    public MenuValue setIconUrl(java.lang.String iconUrl) {
+        this.iconUrl = iconUrl;
+        return this;
+    }
 
-  /**
-   * The state that this value applies to. Allowed values are: - DEFAULT - Default value shown when
-   * displayed in the menuItems list.  - PENDING - Value shown when the menuItem has been selected
-   * by the user but can still be cancelled.  - CONFIRMED - Value shown when the menuItem has been
-   * selected by the user and can no longer be cancelled.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getState() {
-    return state;
-  }
+    /**
+     * The state that this value applies to. Allowed values are: - DEFAULT - Default value shown when displayed in the
+     * menuItems list. - PENDING - Value shown when the menuItem has been selected by the user but can still be
+     * cancelled. - CONFIRMED - Value shown when the menuItem has been selected by the user and can no longer be
+     * cancelled.
+     * 
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getState() {
+        return state;
+    }
 
-  /**
-   * The state that this value applies to. Allowed values are: - DEFAULT - Default value shown when
-   * displayed in the menuItems list.  - PENDING - Value shown when the menuItem has been selected
-   * by the user but can still be cancelled.  - CONFIRMED - Value shown when the menuItem has been
-   * selected by the user and can no longer be cancelled.
-   * @param state state or {@code null} for none
-   */
-  public MenuValue setState(java.lang.String state) {
-    this.state = state;
-    return this;
-  }
+    /**
+     * The state that this value applies to. Allowed values are: - DEFAULT - Default value shown when displayed in the
+     * menuItems list. - PENDING - Value shown when the menuItem has been selected by the user but can still be
+     * cancelled. - CONFIRMED - Value shown when the menuItem has been selected by the user and can no longer be
+     * cancelled.
+     * 
+     * @param state state or {@code null} for none
+     */
+    public MenuValue setState(java.lang.String state) {
+        this.state = state;
+        return this;
+    }
 
-  @Override
-  public MenuValue set(String fieldName, Object value) {
-    return (MenuValue) super.set(fieldName, value);
-  }
+    @Override
+    public MenuValue set(String fieldName, Object value) {
+        return (MenuValue) super.set(fieldName, value);
+    }
 
-  @Override
-  public MenuValue clone() {
-    return (MenuValue) super.clone();
-  }
+    @Override
+    public MenuValue clone() {
+        return (MenuValue) super.clone();
+    }
 
 }

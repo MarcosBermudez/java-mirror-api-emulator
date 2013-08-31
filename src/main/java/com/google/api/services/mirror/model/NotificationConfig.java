@@ -22,76 +22,80 @@ package com.google.api.services.mirror.model;
 
 /**
  * Controls how notifications for a timeline item are presented to the user.
- *
- * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Mirror API. For a detailed explanation see:
- * <a href="http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ * 
+ * <p>
+ * This is the Java data model class that specifies how to parse/serialize into the JSON that is transmitted over HTTP
+ * when working with the Google Mirror API. For a detailed explanation see: <a
+ * href="http://code.google.com/p/google-http-java-client/wiki/JSON"
+ * >http://code.google.com/p/google-http-java-client/wiki/JSON</a>
  * </p>
- *
+ * 
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
 public final class NotificationConfig extends com.google.api.client.json.GenericJson {
 
-  /**
-   * The time at which the notification should be delivered.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime deliveryTime;
+    /**
+     * The time at which the notification should be delivered. The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private com.google.api.client.util.DateTime deliveryTime;
 
-  /**
-   * Describes how important the notification is. Allowed values are: - DEFAULT - Notifications of
-   * default importance. A chime will be played to alert users.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String level;
+    /**
+     * Describes how important the notification is. Allowed values are: - DEFAULT - Notifications of default importance.
+     * A chime will be played to alert users. The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String level;
 
-  /**
-   * The time at which the notification should be delivered.
-   * @return value or {@code null} for none
-   */
-  public com.google.api.client.util.DateTime getDeliveryTime() {
-    return deliveryTime;
-  }
+    /**
+     * The time at which the notification should be delivered.
+     * 
+     * @return value or {@code null} for none
+     */
+    public com.google.api.client.util.DateTime getDeliveryTime() {
+        return deliveryTime;
+    }
 
-  /**
-   * The time at which the notification should be delivered.
-   * @param deliveryTime deliveryTime or {@code null} for none
-   */
-  public NotificationConfig setDeliveryTime(com.google.api.client.util.DateTime deliveryTime) {
-    this.deliveryTime = deliveryTime;
-    return this;
-  }
+    /**
+     * The time at which the notification should be delivered.
+     * 
+     * @param deliveryTime deliveryTime or {@code null} for none
+     */
+    public NotificationConfig setDeliveryTime(com.google.api.client.util.DateTime deliveryTime) {
+        this.deliveryTime = deliveryTime;
+        return this;
+    }
 
-  /**
-   * Describes how important the notification is. Allowed values are: - DEFAULT - Notifications of
-   * default importance. A chime will be played to alert users.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getLevel() {
-    return level;
-  }
+    /**
+     * Describes how important the notification is. Allowed values are: - DEFAULT - Notifications of default importance.
+     * A chime will be played to alert users.
+     * 
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getLevel() {
+        return level;
+    }
 
-  /**
-   * Describes how important the notification is. Allowed values are: - DEFAULT - Notifications of
-   * default importance. A chime will be played to alert users.
-   * @param level level or {@code null} for none
-   */
-  public NotificationConfig setLevel(java.lang.String level) {
-    this.level = level;
-    return this;
-  }
+    /**
+     * Describes how important the notification is. Allowed values are: - DEFAULT - Notifications of default importance.
+     * A chime will be played to alert users.
+     * 
+     * @param level level or {@code null} for none
+     */
+    public NotificationConfig setLevel(java.lang.String level) {
+        this.level = level;
+        return this;
+    }
 
-  @Override
-  public NotificationConfig set(String fieldName, Object value) {
-    return (NotificationConfig) super.set(fieldName, value);
-  }
+    @Override
+    public NotificationConfig set(String fieldName, Object value) {
+        return (NotificationConfig) super.set(fieldName, value);
+    }
 
-  @Override
-  public NotificationConfig clone() {
-    return (NotificationConfig) super.clone();
-  }
+    @Override
+    public NotificationConfig clone() {
+        return (NotificationConfig) super.clone();
+    }
 
 }

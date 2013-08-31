@@ -22,102 +22,103 @@ package com.google.api.services.mirror;
 
 /**
  * Mirror request initializer for setting properties like key and userIp.
- *
+ * 
  * <p>
  * The simplest usage is to use it to set the key parameter:
  * </p>
- *
+ * 
  * <pre>
-  public static final GoogleClientRequestInitializer KEY_INITIALIZER =
-      new MirrorRequestInitializer(KEY);
+ * public static final GoogleClientRequestInitializer KEY_INITIALIZER = new MirrorRequestInitializer(KEY);
  * </pre>
- *
+ * 
  * <p>
  * There is also a constructor to set both the key and userIp parameters:
  * </p>
- *
+ * 
  * <pre>
-  public static final GoogleClientRequestInitializer INITIALIZER =
-      new MirrorRequestInitializer(KEY, USER_IP);
+ * public static final GoogleClientRequestInitializer INITIALIZER = new MirrorRequestInitializer(KEY, USER_IP);
  * </pre>
- *
+ * 
  * <p>
  * If you want to implement custom logic, extend it like this:
  * </p>
- *
+ * 
  * <pre>
-  public static class MyRequestInitializer extends MirrorRequestInitializer {
-
-    {@literal @}Override
-    public void initializeMirrorRequest(MirrorRequest{@literal <}?{@literal >} request)
-        throws IOException {
-      // custom logic
-    }
-  }
+ *   public static class MyRequestInitializer extends MirrorRequestInitializer {
+ * 
+ *     {@literal @}Override
+ *     public void initializeMirrorRequest(MirrorRequest{@literal <}?{@literal >} request)
+ *         throws IOException {
+ *       // custom logic
+ *     }
+ *   }
  * </pre>
- *
+ * 
  * <p>
  * Finally, to set the key and userIp parameters and insert custom logic, extend it like this:
  * </p>
- *
+ * 
  * <pre>
-  public static class MyRequestInitializer2 extends MirrorRequestInitializer {
-
-    public MyKeyRequestInitializer() {
-      super(KEY, USER_IP);
-    }
-
-    {@literal @}Override
-    public void initializeMirrorRequest(MirrorRequest{@literal <}?{@literal >} request)
-        throws IOException {
-      // custom logic
-    }
-  }
+ *   public static class MyRequestInitializer2 extends MirrorRequestInitializer {
+ * 
+ *     public MyKeyRequestInitializer() {
+ *       super(KEY, USER_IP);
+ *     }
+ * 
+ *     {@literal @}Override
+ *     public void initializeMirrorRequest(MirrorRequest{@literal <}?{@literal >} request)
+ *         throws IOException {
+ *       // custom logic
+ *     }
+ *   }
  * </pre>
- *
+ * 
  * <p>
  * Subclasses should be thread-safe.
  * </p>
- *
+ * 
  * @since 1.12
  */
-public class MirrorRequestInitializer extends com.google.api.client.googleapis.services.json.CommonGoogleJsonClientRequestInitializer {
+public class MirrorRequestInitializer extends
+        com.google.api.client.googleapis.services.json.CommonGoogleJsonClientRequestInitializer {
 
-  public MirrorRequestInitializer() {
-    super();
-  }
+    public MirrorRequestInitializer() {
+        super();
+    }
 
-  /**
-   * @param key API key or {@code null} to leave it unchanged
-   */
-  public MirrorRequestInitializer(String key) {
-    super(key);
-  }
+    /**
+     * @param key API key or {@code null} to leave it unchanged
+     */
+    public MirrorRequestInitializer(String key) {
+        super(key);
+    }
 
-  /**
-   * @param key API key or {@code null} to leave it unchanged
-   * @param userIp user IP or {@code null} to leave it unchanged
-   */
-  public MirrorRequestInitializer(String key, String userIp) {
-    super(key, userIp);
-  }
+    /**
+     * @param key API key or {@code null} to leave it unchanged
+     * @param userIp user IP or {@code null} to leave it unchanged
+     */
+    public MirrorRequestInitializer(String key, String userIp) {
+        super(key, userIp);
+    }
 
-  @Override
-  public final void initializeJsonRequest(com.google.api.client.googleapis.services.json.AbstractGoogleJsonClientRequest<?> request) throws java.io.IOException {
-    super.initializeJsonRequest(request);
-    initializeMirrorRequest((MirrorRequest<?>) request);
-  }
+    @Override
+    public final void initializeJsonRequest(
+            com.google.api.client.googleapis.services.json.AbstractGoogleJsonClientRequest<?> request)
+            throws java.io.IOException {
+        super.initializeJsonRequest(request);
+        initializeMirrorRequest((MirrorRequest<?>) request);
+    }
 
-  /**
-   * Initializes Mirror request.
-   *
-   * <p>
-   * Default implementation does nothing. Called from
-   * {@link #initializeJsonRequest(com.google.api.client.googleapis.services.json.AbstractGoogleJsonClientRequest)}.
-   * </p>
-   *
-   * @throws java.io.IOException I/O exception
-   */
-  protected void initializeMirrorRequest(MirrorRequest<?> request) throws java.io.IOException {
-  }
+    /**
+     * Initializes Mirror request.
+     * 
+     * <p>
+     * Default implementation does nothing. Called from
+     * {@link #initializeJsonRequest(com.google.api.client.googleapis.services.json.AbstractGoogleJsonClientRequest)}.
+     * </p>
+     * 
+     * @throws java.io.IOException I/O exception
+     */
+    protected void initializeMirrorRequest(MirrorRequest<?> request) throws java.io.IOException {
+    }
 }

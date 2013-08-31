@@ -21,75 +21,78 @@
 package com.google.api.services.mirror.model;
 
 /**
- * A list of Locations. This is the response from the server to GET requests on the locations
- * collection.
- *
- * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Mirror API. For a detailed explanation see:
- * <a href="http://code.google.com/p/google-http-java-client/wiki/JSON">http://code.google.com/p/google-http-java-client/wiki/JSON</a>
+ * A list of Locations. This is the response from the server to GET requests on the locations collection.
+ * 
+ * <p>
+ * This is the Java data model class that specifies how to parse/serialize into the JSON that is transmitted over HTTP
+ * when working with the Google Mirror API. For a detailed explanation see: <a
+ * href="http://code.google.com/p/google-http-java-client/wiki/JSON"
+ * >http://code.google.com/p/google-http-java-client/wiki/JSON</a>
  * </p>
- *
+ * 
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
 public final class LocationsListResponse extends com.google.api.client.json.GenericJson {
 
-  /**
-   * The list of locations.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<Location> items;
+    /**
+     * The list of locations. The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.util.List<Location> items;
 
-  /**
-   * The type of resource. This is always mirror#locationsList.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String kind;
+    /**
+     * The type of resource. This is always mirror#locationsList. The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String kind;
 
-  /**
-   * The list of locations.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<Location> getItems() {
-    return items;
-  }
+    /**
+     * The list of locations.
+     * 
+     * @return value or {@code null} for none
+     */
+    public java.util.List<Location> getItems() {
+        return items;
+    }
 
-  /**
-   * The list of locations.
-   * @param items items or {@code null} for none
-   */
-  public LocationsListResponse setItems(java.util.List<Location> items) {
-    this.items = items;
-    return this;
-  }
+    /**
+     * The list of locations.
+     * 
+     * @param items items or {@code null} for none
+     */
+    public LocationsListResponse setItems(java.util.List<Location> items) {
+        this.items = items;
+        return this;
+    }
 
-  /**
-   * The type of resource. This is always mirror#locationsList.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getKind() {
-    return kind;
-  }
+    /**
+     * The type of resource. This is always mirror#locationsList.
+     * 
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getKind() {
+        return kind;
+    }
 
-  /**
-   * The type of resource. This is always mirror#locationsList.
-   * @param kind kind or {@code null} for none
-   */
-  public LocationsListResponse setKind(java.lang.String kind) {
-    this.kind = kind;
-    return this;
-  }
+    /**
+     * The type of resource. This is always mirror#locationsList.
+     * 
+     * @param kind kind or {@code null} for none
+     */
+    public LocationsListResponse setKind(java.lang.String kind) {
+        this.kind = kind;
+        return this;
+    }
 
-  @Override
-  public LocationsListResponse set(String fieldName, Object value) {
-    return (LocationsListResponse) super.set(fieldName, value);
-  }
+    @Override
+    public LocationsListResponse set(String fieldName, Object value) {
+        return (LocationsListResponse) super.set(fieldName, value);
+    }
 
-  @Override
-  public LocationsListResponse clone() {
-    return (LocationsListResponse) super.clone();
-  }
+    @Override
+    public LocationsListResponse clone() {
+        return (LocationsListResponse) super.clone();
+    }
 
 }
