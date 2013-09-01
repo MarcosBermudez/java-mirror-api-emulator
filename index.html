@@ -82,6 +82,13 @@ Operations to perform :</p>
     "https://&lt;your_app_id&gt;.appspot.com");
   }
   </code></pre>
+  <li><p>Add the Oauth 2.0 <strong>'userinfo.email'</strong> scope. Update the GLASS_SCOPE field of the com.google.glassware.AuthUtil class to look as following: </p></li>
+    <pre><code>  
+  public static final String GLASS_SCOPE = "https://www.googleapis.com/auth/glass.timeline "
+      + "https://www.googleapis.com/auth/glass.location "
+      + "https://www.googleapis.com/auth/userinfo.profile "
+      + "https://www.googleapis.com/auth/userinfo.email";
+  </code></pre>
 </ol><h2>
 <a name="launch-your-glassware" class="anchor" href="#launch-your-glassware"><span class="octicon octicon-link"></span></a>Launch your GlassWare</h2>
 
