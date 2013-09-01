@@ -33,6 +33,8 @@ package com.google.api.services.mirror.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
+//Change for v1-emulated by bwnyasse : Modify the way to access com.google.api.client.util.DateTime key. Define field
+//as java.util.String instead of com.google.api.client.util.DateTime
 public final class Location extends com.google.api.client.json.GenericJson {
 
     /**
@@ -82,7 +84,7 @@ public final class Location extends com.google.api.client.json.GenericJson {
      * The time at which this location was captured, formatted according to RFC 3339. The value may be {@code null}.
      */
     @com.google.api.client.util.Key
-    private com.google.api.client.util.DateTime timestamp;
+    private java.lang.String timestamp;
 
     /**
      * The accuracy of the location fix in meters.
@@ -223,7 +225,7 @@ public final class Location extends com.google.api.client.json.GenericJson {
      * @return value or {@code null} for none
      */
     public com.google.api.client.util.DateTime getTimestamp() {
-        return timestamp;
+        return new com.google.api.client.util.DateTime(timestamp);
     }
 
     /**
@@ -231,7 +233,7 @@ public final class Location extends com.google.api.client.json.GenericJson {
      * 
      * @param timestamp timestamp or {@code null} for none
      */
-    public Location setTimestamp(com.google.api.client.util.DateTime timestamp) {
+    public Location setTimestamp(java.lang.String timestamp) {
         this.timestamp = timestamp;
         return this;
     }
