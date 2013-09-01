@@ -1109,6 +1109,13 @@ public class Mirror extends com.google.api.client.googleapis.services.json.Abstr
          */
         public Insert insert(com.google.api.services.mirror.model.Subscription content) throws java.io.IOException {
             Insert result = new Insert(content);
+
+            // It seems that the Google API allows to insert subscription without VerifyToken. Emulator don't allow
+            // this. In order to bypass the problem we specify as Verify token the user id if no verify was set.
+            if (content.getVerifyToken() == null && content.getUserToken() != null) {
+                content.setVerifyToken(content.getUserToken());
+            }
+
             initialize(result);
             return result;
         }
