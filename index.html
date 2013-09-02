@@ -43,21 +43,32 @@ You need to have installed and deployed your own <a href="https://github.com/Sca
 <p> Our goal is to send orders from java to this emulator.</p>
 
 <h2>
-<a name="get-the-official-google-glassmirror-quickstart-java" class="anchor" href="#get-the-official-google-glassmirror-quickstart-java"><span class="octicon octicon-link"></span></a>Get the official Google Glass/mirror-quickstart-java</h2>
+<a name="get-the-java-mirror-api-emulator" class="anchor" href="#get-the-java-mirror-api-emulator"><span class="octicon octicon-link"></span></a>Get the Java Mirror Api Emulator</h2>
 
-<p>We will use the <a href="https://github.com/googleglass/mirror-quickstart-java">googleglass/mirror-quickstart-java</a> as the quickstart project. You will have to clone the project and import in your favorite IDE.
-
-
-<p>In the oauth.properties you will set your own Google Glass emulator credentials.</p>
+<p>Download the last version of  <a href="https://github.com/MarcosBermudez/java-mirror-api-emulator">Java-mirror-api-emulator.jar</a> 
 
 <h2>
-<a name="setup-the-java-mirror-emulator" class="anchor" href="#setup-the-java-mirror-emulator"><span class="octicon octicon-link"></span></a>Setup the java-mirror-emulator</h2>
+<a name="get-a-google-glassmirror-quickstart-java" class="anchor" href="#get-a-google-glassmirror-quickstart-java"><span class="octicon octicon-link"></span></a>Get a Google Glass/mirror-quickstart-java</h2>
+
+Here , we have two choices to provide : 
+<ol>
+<li><p> The easy way is to get the java-mirror-api-emulator <a href="https://github.com/bwnyasse/mirror-quickstart-java">quick start project</a> and directly <a href="#launch-your-glassware">launch it</a>. </p></li>
+
+<li><p> Or , you can use the official <a href="https://github.com/googleglass/mirror-quickstart-java">googleglass/mirror-quickstart-java</a> as the quickstart project , import it in your favorite IDE and <a href="#setup-the-mirror-quick-start-java">set up </a>everything.</p></li>
+
+
+<p>Don't forget to look at the oauth.properties file in the quick start project to set your own properties.</p>
+
+</ol>
+
+<h2>
+<a name="setup-the-mirror-quick-start-java" class="anchor" href="#setup-the-mirror-quick-start-java"><span class="octicon octicon-link"></span></a>Setup the google glass quick start </h2>
 
 <p>Okey, the most difficult part is done. The only remaining thing is to configure the official Google Glass/mirror-quickstart-java to use your emulator. This is where this project magic starts. 
 Operations to perform :</p>
 
 <ol>
-<li><p>Download the last version of Java-mirror-api-emulator.jar</p></li>
+
 <li><p>Modify the pom.xml to use the mirror Java-mirror-api-emulator.</p></li>
   <pre><code>&lt;dependency&gt;
       &lt;groupId&gt;com.google.apis&lt;/groupId&gt;
