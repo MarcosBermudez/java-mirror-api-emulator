@@ -45,7 +45,7 @@ public final class Notification extends com.google.api.client.json.GenericJson {
      * The ID of the item that generated the notification. The value may be {@code null}.
      */
     @com.google.api.client.util.Key
-    private java.lang.String itemId;
+    private java.lang.Long itemId;
 
     /**
      * The type of operation that generated the notification. The value may be {@code null}.
@@ -103,7 +103,7 @@ public final class Notification extends com.google.api.client.json.GenericJson {
      * @return value or {@code null} for none
      */
     public java.lang.String getItemId() {
-        return itemId;
+        return itemId == null ? null : "" + itemId;
     }
 
     /**
@@ -112,7 +112,7 @@ public final class Notification extends com.google.api.client.json.GenericJson {
      * @param itemId itemId or {@code null} for none
      */
     public Notification setItemId(java.lang.String itemId) {
-        this.itemId = itemId;
+        this.itemId = itemId == null ? null : Long.parseLong(itemId);
         return this;
     }
 
