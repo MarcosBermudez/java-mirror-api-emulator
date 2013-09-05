@@ -76,7 +76,12 @@ public final class EmulatorUtil {
     private static final void setAppEngineApplicationURL(String appURL) {
 
         if (StringUtils.isNotBlank(appURL)) {
-            String rootURL = appURL + "/_ah/api/";
+            // Control that the appURL always ends by "/"
+            if (!appURL.endsWith("/")) {
+                appURL = appURL + "/";
+            }
+            // Construct the appenine emulator endpoints
+            String rootURL = appURL + "_ah/api/";
             if (System.getProperty(APP_ENGINE_APPLICATION_URL) != rootURL) {
                 System.setProperty(APP_ENGINE_APPLICATION_URL, rootURL);
             }
